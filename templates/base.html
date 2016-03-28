@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>So Yun Jin - {{title}} </title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+	<link href="static/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="top" class="container-fluid text-center">
+			<!-- <h1>So Yun Jin</h1> -->
+			<img src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 350px"/>
+		</div>
+		<!-- {% block header %}
+		I should never see this content.  It should be replaced.
+		{% endblock %} -->
+		<div id="navigation" >
+			<!-- <h1>SO YUN JIN</h1> -->
+			<img id = "logo" src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 100px"/>
+			 <nav class="navbar navbar-default" id= "navbar-main">
+		        <div>
+		            <div class="navbar-header page-scroll">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		            </div>
+
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		                
+		                <ul class="nav navbar-nav">
+		                    <li class="hidden">
+		                        <a href="#page-top"></a>
+		                    </li>
+		                     <li class="page-scroll">
+		                        <a href="index">Home</a>
+		                    </li>
+		                    <li class="page-scroll">
+		                        <a href="food">Food</a>
+		                    </li>
+		                     <li class="page-scroll">
+		                        <a href="hobby">Hobby</a>
+		                    </li>
+		                    <li class="page-scroll">
+		                        <a href="login">Login</a>
+		                    </li>
+		                </ul>
+		            </div>
+		         
+		        </div>
+			  
+			</nav> 
+		</div>
+	</header>
+	<div class = "content">
+		{% block content %}
+		I should never see this content.  It should be replaced.
+		{% endblock %}
+	</div>
+	<footer>
+		<ul class="nav navbar-nav navbar-left social">
+            <li><a href="#"><i class="fa fa-sm fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-sm fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-sm fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-sm fa-envelope"></i></a></li>
+        </ul>
+		<p class="copyright">Copyright &copy; So Yun Jin.</p>
+	</footer>
+	
+	<script>var fixmeTop = $('#navigation').offset().top;
+$(window).scroll(function() {
+    var currentScroll = $(window).scrollTop();
+    if (currentScroll >= fixmeTop) {
+        $('#navigation').css({
+            position: 'fixed',
+            top: '0',
+            left: '0'
+        });
+        $('#navigation #logo').css({
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+        });
+    } else {
+        $('#navigation').css({
+            position: 'static'
+        });
+        $('#navigation #logo').css({
+            display: 'none'
+        });
+    }
+});</script>
+</body>
+</html>

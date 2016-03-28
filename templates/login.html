@@ -1,0 +1,12 @@
+{% extends "templates/base.html" %}
+<!-- {% block header %}
+    <h1>Login</h1>
+{%endblock%} -->
+{% block content %} 
+    {{errormessage}}
+    <form action = "/login" method = "post">
+        <label>username: <input type = "text" name = "name"></label>
+        <label>password: <input type = "password" name = "pw"></label>
+        <input type = "submit" value = "login">
+    </form> 
+{%endblock%}

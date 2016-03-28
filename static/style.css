@@ -1,0 +1,111 @@
+#top{
+	background-color: white;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+
+/*navigation*/
+#navigation{
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar-default{
+    border: 0;
+    background-color: #FFFFFF;
+    background-image: none;
+    box-shadow: none;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #FFFFFF;
+    border: 0;
+    font-size: 14px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+    text-align: center;
+    box-shadow: none;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  border: 0;
+  float: none;
+  vertical-align: top;
+  box-shadow: none;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+/* On hover, the links will turn white */
+#navigation .navbar-nav li{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.navbar-nav li a:hover {
+    color: #6F4E37 !important;
+}
+
+/* The active link, when scroll to the section, the menu items will turn to different color */
+.navbar-nav li.active a {
+    color: #3B3131 !important;
+    background-color: floralwhite !important;
+}
+.navbar-default .navbar-collapse{
+    border: none;
+}
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+
+.content{
+    padding-top: 50px;
+}
+h1{
+    font-family: serif;
+    font-size: 20px;
+}
+
+#navigation #logo{
+    display: none;
+}
+footer{
+    height: 50px;
+}
+footer .nav>li>a{
+    display: inline;
+    padding: 5px 5px;
+}
+footer .nav>li{
+    display: inline;
+}
+footer ul{
+    display: inline;
+}
+
+.copyright{
+    display: inline;
+    float: right;
+}
