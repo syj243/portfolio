@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>So Yun Jin - {{title}} </title>
+	<link rel="icon" type="image/x‐icon" href="static/favicon.ico"/>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- Optional theme -->
@@ -16,18 +17,13 @@
 </head>
 <body>
 	<header>
-		<div id="top" class="container-fluid text-center">
-			<!-- <h1>So Yun Jin</h1> -->
+		<!-- <div id="top" class="container-fluid text-center">
 			<img src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 350px"/>
-		</div>
-		<!-- {% block header %}
-		I should never see this content.  It should be replaced.
-		{% endblock %} -->
+		</div> -->
 		<div id="navigation" >
-			<!-- <h1>SO YUN JIN</h1> -->
-			<img id = "logo" src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 100px"/>
 			 <nav class="navbar navbar-default" id= "navbar-main">
 		        <div>
+		        	<img id = "logo" src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 100px"/>
 		            <div class="navbar-header page-scroll">
 		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 		                    <span class="sr-only">Toggle navigation</span>
@@ -37,9 +33,7 @@
 		                    <span class="icon-bar"></span>
 		                </button>
 		            </div>
-
 		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		                
 		                <ul class="nav navbar-nav">
 		                    <li class="hidden">
 		                        <a href="#page-top"></a>
@@ -63,12 +57,15 @@
 			  
 			</nav> 
 		</div>
+		{% block header %}
+		I should never see this content.  It should be replaced.
+		{% endblock %}
 	</header>
-	<div class = "content">
+<!-- 	<div class = "content"> -->
 		{% block content %}
 		I should never see this content.  It should be replaced.
 		{% endblock %}
-	</div>
+<!-- 	</div> -->
 	<footer>
 		<ul class="nav navbar-nav navbar-left social">
             <li><a href="#"><i class="fa fa-sm fa-facebook"></i></a></li>
@@ -88,17 +85,9 @@ $(window).scroll(function() {
             top: '0',
             left: '0'
         });
-        $('#navigation #logo').css({
-            display: 'block',
-            marginLeft: 'auto',
-            marginRight: 'auto'
-        });
     } else {
         $('#navigation').css({
             position: 'static'
-        });
-        $('#navigation #logo').css({
-            display: 'none'
         });
     }
 });</script>
