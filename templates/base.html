@@ -23,7 +23,7 @@
 		<div id="navigation" >
 			 <nav class="navbar navbar-default" id= "navbar-main">
 		        <div>
-		        	<img id = "logo" src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 100px"/>
+		        	<img id = "logo" src = "static/mypagelogo.png" alt = "soyunjin_logo" style= "width: 110px"/>
 		            <div class="navbar-header page-scroll">
 		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 		                    <span class="sr-only">Toggle navigation</span>
@@ -39,16 +39,16 @@
 		                        <a href="#page-top"></a>
 		                    </li>
 		                     <li class="page-scroll">
-		                        <a href="index">Home</a>
+		                        <a {% if title == "HOME" %} class = "active" {% endif %} href="index">Home</a>
 		                    </li>
 		                    <li class="page-scroll">
-		                        <a href="food">Food</a>
+		                        <a {% if title == "FOOD" %} class = "active" {% endif %} href="food">Food</a>
 		                    </li>
 		                     <li class="page-scroll">
-		                        <a href="hobby">Hobby</a>
+		                        <a {% if title == "HOBBY" %} class = "active" {% endif %} href="hobby">Hobby</a>
 		                    </li>
 		                    <li class="page-scroll">
-		                        <a href="login">Login</a>
+		                        <a {% if title == "LOGIN" %} class = "active" {% endif %} href="login">Login</a>
 		                    </li>
 		                </ul>
 		            </div>
@@ -68,15 +68,15 @@
 <!-- 	</div> -->
 	<footer>
 		<ul class="nav navbar-nav navbar-left social">
-            <li><a href="#"><i class="fa fa-sm fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-sm fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-sm fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-sm fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-envelope"></i></a></li>
         </ul>
 		<p class="copyright">Copyright &copy; So Yun Jin.</p>
 	</footer>
 	
-	<script>var fixmeTop = $('#navigation').offset().top;
+<script>var fixmeTop = $('#navigation').offset().top;
 $(window).scroll(function() {
     var currentScroll = $(window).scrollTop();
     if (currentScroll >= fixmeTop) {

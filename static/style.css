@@ -1,18 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
 #welcome { 
-  background: url(bg_image_bw.jpg) no-repeat center center fixed; 
+
+  background: black url(bg_image_bw.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 650px;
+  height: 750px;
   padding-top: 50px;
 }
-
-/*#top{
-	background-color: white;
-    padding-bottom: 100px;
-    padding-top: 100px;
-}*/
 
 body{
     background-size: cover;
@@ -24,23 +26,23 @@ body{
 /*navigation*/
 #navigation{
     text-align: center;
-    background-color: black;
+    background-image: bg_image_bw.jpg;
+    background-position: top;
     width: 100%;
     position: fixed;
+    z-index: 100;
 }
 
 .navbar-default{
     border: 0;
-    background-color: black;
-    background-image: none;
     box-shadow: none;
 }
 
 .navbar {
     margin-bottom: 0;
-    background-color: #FFFFFF;
+    background-color: black;
     border: 0;
-    font-size: 14px !important;
+    font-size: 15px !important;
     letter-spacing: 4px;
     opacity:0.8;
     text-align: right;
@@ -73,13 +75,16 @@ body{
 }*/
 .navbar-nav li a:hover {
     color: #6F4E37 !important;
+    text-decoration: underline;
 }
 
 /* The active link, when scroll to the section, the menu items will turn to different color */
-.navbar-nav li.active a {
-    color: #3B3131 !important;
-    background-color: floralwhite !important;
+.navbar-nav li a.active {
+    color: floralwhite !important;
+    text-decoration: underline;
+    background-color: grey !important;
 }
+
 .navbar-default .navbar-collapse{
     border: none;
 }
@@ -105,22 +110,46 @@ body{
     background-color: red !important;
 }
 
-.content{
+#welcome{
+    position: relative;
 }
+#diamond{
+    padding-top: 55px;
+    z-index: 1; 
+    position:fixed; 
+}
+#welcome_message{
+    font-family: "Source Code Pro", sans-serif;
+    padding-top: 230px; 
+    padding-left: 80px;
+    color: white;
+    font-size: 50px;
+    z-index: 2; 
+    position:fixed; 
+}
+
+
 h1{
     font-family: serif;
     font-size: 20px;
 }
 
-/*#navigation #logo{
-    display: none;
-}*/
 footer{
-    height: 50px;
+    height: 40px;
+    background-color: black;
+}
+footer p{
+    padding-top: 10px;
+    padding-right: 5px;
+}
+footer .nav{
+    padding-left: 10px;
+    padding-top: 10px;
 }
 footer .nav>li>a{
     display: inline;
-    padding: 5px 5px;
+    padding: 0px 10px;
+    color: white;
 }
 footer .nav>li{
     display: inline;
