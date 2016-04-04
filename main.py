@@ -41,6 +41,8 @@ class firstHandler(webapp2.RequestHandler):
             self.response.write(template.render({'title': 'FOOD'}))
         if path == "/hobby":
             self.response.write(template.render({'title': 'HOBBY'}))
+        if path == "/personal":
+            self.response.write(template.render({'title': 'PERSONAL'}))
 
         
 # class FamilyHandler(webapp2.RequestHandler):

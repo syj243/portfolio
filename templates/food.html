@@ -3,14 +3,15 @@
 {% block header %}
 <div class = "top" style="background-image: url(../static/image_bw.jpg);"> 
 	<div class="col-md-4 col-md-offset-4" >
-		<h1>ABOUT ME</h1> </div>
-
+		<h1 align="center">ABOUT ME</h1> </div>
 </div>
 {% endblock %}
 
 {% block content %}
-
-	<p>
-		My favorite food is pasta, and I love cooking it myself! My favorite types are Alio Olio and tomato sauce pasta. </p>
-		<img src = "static/pasta.jpg" alt = "pasta" style="width:50%;"/>
+	<div class = "aboutme container text-center"">
+		<div class = "col-md-4 col-md-offset-4 about_img" > 
+			<img class="img-circle img-responsive" src="static/about.jpg" alt = "soyunjin_face">
+		</div>
+	</div>
+	
 {% endblock %}

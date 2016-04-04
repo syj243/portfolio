@@ -139,13 +139,14 @@ body{
     background-size: cover;
     background-position: bottom;
     color: white;
-    vertical-align: center;
+    vertical-align: center  ;
     float:center;
     font-size: 40px;
 }
 .top .col-md-4{
-    padding-top: 80px;
-    padding-left: 60px;
+    padding-top: 70px;
+    /*padding-left: 60px;*/
+   /* margin: auto;*/
 }
 
 .top h1{
@@ -153,6 +154,10 @@ body{
     font-family: 'Questrial', sans-serif;
 }
 
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 h1{
     font-size: 20px;
 }

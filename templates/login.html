@@ -1,7 +1,10 @@
 {% extends "templates/base.html" %}
-<!-- {% block header %}
-    <h1>Login</h1>
-{%endblock%} -->
+{% block header %}
+    <div class = "top" style="background-image: url(../static/contact_cover.jpg); background-position: center;"> 
+		<div class="col-md-4 col-md-offset-4" >
+			<h1 align="center">CONTACT</h1> </div>
+	</div>
+{%endblock%}
 {% block content %} 
     {{errormessage}}
     <form action = "/login" method = "post">
