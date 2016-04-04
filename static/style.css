@@ -1,18 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300);
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Questrial);
 
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #welcome { 
 
-  background: black url(bg_image_bw.jpg) no-repeat center center fixed; 
+  background: no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 750px;
+  height: 600px;
+  margin-bottom: 0px;
   padding-top: 50px;
 }
 
@@ -26,7 +28,6 @@ body{
 /*navigation*/
 #navigation{
     text-align: center;
-    background-image: bg_image_bw.jpg;
     background-position: top;
     width: 100%;
     position: fixed;
@@ -40,11 +41,12 @@ body{
 
 .navbar {
     margin-bottom: 0;
-    background-color: black;
     border: 0;
     font-size: 15px !important;
     letter-spacing: 4px;
-    opacity:0.8;
+  /*  background: none;*/
+    background:#7f7f7f;
+    background:rgba(0,0,0,0.3);
     text-align: right;
     box-shadow: none;
     border-radius: 0;
@@ -52,37 +54,42 @@ body{
 .navbar .navbar-nav {
   display: inline-block;
   border: 0;
-  float: right;
+  float: center;
   vertical-align: top;
   box-shadow: none;
 }
-#logo{
+/*.title{
     float: left;
     display: inline-block;
     vertical-align: middle;
     border: 0;
-    padding-top: 10px;
+    color:white;
+    padding-top: 15px;
     padding-left: 10px;
-}
+}*/
 .navbar .navbar-collapse {
   text-align: center;
+
 }
 
 /* On hover, the links will turn white */
-/*#navigation .navbar-nav li{
+#navigation .navbar-nav li{
     margin-left: 30px;
     margin-right: 30px;
-}*/
+}
+.navbar-default .navbar-nav>li>a{
+    color: white;
+}
 .navbar-nav li a:hover {
-    color: #6F4E37 !important;
+    color: white !important;
     text-decoration: underline;
 }
 
 /* The active link, when scroll to the section, the menu items will turn to different color */
 .navbar-nav li a.active {
-    color: floralwhite !important;
+/*    color: floralwhite !important;*/
     text-decoration: underline;
-    background-color: grey !important;
+/*    background-color: grey !important;*/
 }
 
 .navbar-default .navbar-collapse{
@@ -93,22 +100,20 @@ body{
     border-color: transparent;
 }
 
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: white;
+}
+
 /* Dropdown */
-.open .dropdown-toggle {
-    color: #fff ;
+/*.open .dropdown-toggle {
     background-color: #555 !important;
 }
 
-/* Dropdown links */
+ Dropdown links 
 .dropdown-menu li a {
-    color: #000 !important;
+    color: white !important;
 
-}
-
-/* On hover, the dropdown links will turn red */
-.dropdown-menu li a:hover {
-    background-color: red !important;
-}
+}*/
 
 #welcome{
     position: relative;
@@ -120,17 +125,35 @@ body{
 }
 #welcome_message{
     font-family: "Source Code Pro", sans-serif;
+    font-size: 48px;
     padding-top: 230px; 
     padding-left: 80px;
     color: white;
-    font-size: 50px;
     z-index: 2; 
     position:fixed; 
 }
+.top{
+    height: 300px;
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    vertical-align: center;
+    float:center;
+    font-size: 40px;
+}
+.top .col-md-4{
+    padding-top: 80px;
+    padding-left: 60px;
+}
 
+.top h1{
+    font-size: 50px;
+    font-family: 'Questrial', sans-serif;
+}
 
 h1{
-    font-family: serif;
     font-size: 20px;
 }
 
@@ -159,6 +182,7 @@ footer ul{
 }
 
 .copyright{
+    color:white;
     display: inline;
     float: right;
 }
