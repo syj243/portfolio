@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Questrial);
-
+@import url(https://fonts.googleapis.com/css?family=Oranienbaum);
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -150,8 +150,26 @@ body{
 }
 
 .top h1{
-    font-size: 50px;
-    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+    /*font-family: 'Questrial', sans-serif;*/
+    /*font-family: 'Lobster', cursive;*/
+    /*font-family: 'Crimson Text', serif;*/
+    /*font-family: 'Oleo Script', cursive;*/
+    /*font-family: 'EB Garamond', serif;*/
+    /*font-family: 'Oranienbaum', serif;*/
+}
+
+/*.top h2{
+    border-top: solid;
+    border-width: 1px;
+    padding-top: 3px;   
+}*/
+
+.top .up{
+    border-bottom: solid;
+}
+.top .down{
+    border-top: solid;
 }
 
 .container{
