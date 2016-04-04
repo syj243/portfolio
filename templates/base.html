@@ -15,7 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 	<link href="static/style.css" rel="stylesheet">
 </head>
-<body>
+<body id="page-top">
 	<header>
 		<div id="navigation" >
 			 <nav class="navbar navbar-default" id= "navbar-main">
@@ -40,22 +40,20 @@
 		                        <a {% if title == "HOME" %} class = "active" {% endif %} href="index">HOME</a>
 		                    </li>
 		                    <li class="page-scroll">
-		                        <a {% if title == "FOOD" %} class = "active" {% endif %} href="food">ABOUT</a>
+		                        <a {% if title == "ABOUT" %} class = "active" {% endif %} href="about">ABOUT</a>
 		                    </li>
 		                     <li class="page-scroll">
-		                        <a {% if title == "HOBBY" %} class = "active" {% endif %} href="hobby">WORK</a>
+		                        <a {% if title == "WORK" %} class = "active" {% endif %} href="work">WORK</a>
 		                    </li>
 		                    <li class="page-scroll">
 		                        <a {% if title == "PERSONAL" %} class = "active" {% endif %} href="personal">PERSONAL</a>
 		                    </li>
 		                    <li class="page-scroll">
-		                        <a {% if title == "LOGIN" %} class = "active" {% endif %} href="login">CONTACT</a>
+		                        <a {% if title == "CONTACT" %} class = "active" {% endif %} href="contact">CONTACT</a>
 		                    </li>
 		                </ul>
 		            </div>
-		         
 		        </div>
-			  
 			</nav> 
 		</div>
 		{% block header %}

@@ -37,29 +37,19 @@ class firstHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('templates' + path + '.html')
         if path == "/index":
             self.response.write(template.render({'title': 'HOME'}))
-        if path == "/food":
-            self.response.write(template.render({'title': 'FOOD'}))
-        if path == "/hobby":
-            self.response.write(template.render({'title': 'HOBBY'}))
+        if path == "/about":
+            self.response.write(template.render({'title': 'ABOUT'}))
+        if path == "/work":
+            self.response.write(template.render({'title': 'WORK'}))
         if path == "/personal":
             self.response.write(template.render({'title': 'PERSONAL'}))
 
-        
-# class FamilyHandler(webapp2.RequestHandler):
-#     def get(self):
-#     	template = JINJA_ENVIRONMENT.get_template('templates/hobby.html')
-#     	self.response.write(template.render({'title': 'HOBBY'}))
-
-# class FoodHandler(webapp2.RequestHandler):
-#     def get(self):
-#     	template = JINJA_ENVIRONMENT.get_template('templates/food.html')
-#     	self.response.write(template.render({'title': 'FOOD'}))
 
 class loginHandler(webapp2.RequestHandler):
     def get(self):
       logging.info("-----------Hello GET-------------")          #logging GET request
-      template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-      self.response.write(template.render({'title': 'LOGIN'}))
+      template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+      self.response.write(template.render({'title': 'CONTACT'}))
     def post(self):
       logging.info("-----------Hello POST------------")          #logging POST request
       idIN = self.request.get('name')     #get the login name
@@ -70,14 +60,12 @@ class loginHandler(webapp2.RequestHandler):
       else:
         logging.info("Incorrect name: " + idIN)
         logging.info("Incorrect password: " + passIN) 
-        template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-        self.response.write(template.render({'title': 'LOGIN', 'errormessage':'Bad credentials. Try again.'}))
+        template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+        self.response.write(template.render({'title': 'CONTACT', 'errormessage':'Bad credentials. Try again.'}))
 
 
 app = webapp2.WSGIApplication([
     ('/login', loginHandler),
     ('/index', firstHandler),
     ('/.*', firstHandler)
-    # ('/hobby', FamilyHandler),
-    # ('/food' , FoodHandler)
 ], debug=True)
