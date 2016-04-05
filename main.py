@@ -43,9 +43,17 @@ class firstHandler(webapp2.RequestHandler):
             self.response.write(template.render({'title': 'WORK'}))
         if path == "/personal":
             self.response.write(template.render({'title': 'PERSONAL'}))
+        if path == "/contact":
+            self.response.write(template.render({'title': 'CONTACT'}))
 
+# class emailHandler(webapp2.RequestHandler):
+#     def get(self):
+#         logging.info("-----------Hello GET-------------") 
+#         template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+#         self.response.write(template.render({'title': 'CONTACT'}))
+#     def post(self):
 
-class loginHandler(webapp2.RequestHandler):
+class emailHandler(webapp2.RequestHandler):
     def get(self):
       logging.info("-----------Hello GET-------------")          #logging GET request
       template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
@@ -65,7 +73,7 @@ class loginHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/login', loginHandler),
+    ('/contact', emailHandler),
     ('/index', firstHandler),
     ('/.*', firstHandler)
 ], debug=True)

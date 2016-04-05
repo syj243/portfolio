@@ -105,21 +105,13 @@ body{
     background-color: white;
 }
 
-/* Dropdown */
-/*.open .dropdown-toggle {
-    background-color: #555 !important;
-}
-
- Dropdown links 
-.dropdown-menu li a {
-    color: white !important;
-
-}*/
 
 #welcome{
     position: relative;
+    background-position: left;
 }
 #diamond{
+    display: none;
     padding-top: 55px;
     z-index: 1; 
     position:fixed; 
@@ -127,8 +119,8 @@ body{
 #welcome_message{
     font-family: "Source Code Pro", sans-serif;
     font-size: 48px;
-    padding-top: 230px; 
-    padding-left: 80px;
+    padding-top: 150px; 
+    padding-left: 10px;
     color: white;
     z-index: 2; 
     position:fixed; 
@@ -140,7 +132,7 @@ body{
     background-size: cover;
     background-position: bottom;
     color: white;
-    vertical-align: center  ;
+    vertical-align: center;
     float:center;
     font-size: 40px;
 }
@@ -162,8 +154,13 @@ body{
 }
 
 .container{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 30px;
+}
+.about-img{
+    padding-top: 20px;
+/*    padding-left: 100px;
+    width: 80%;*/
 }
 .about-text{
     padding-top: 50px;
@@ -172,13 +169,30 @@ body{
     font-weight: 300;
 }
 .map{
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+}
+iframe{
+    width:90%;
 }
 .to_top{
-    padding-bottom: 20px;
+    padding-bottom: 20px;   
 }
-h1{
-    font-size: 20px;
+h2{
+    font-size: 25px;
+}
+h3{
+    font-size: 18px;
+    margin-top: 10px;   
+}
+
+
+.portfolio-item{
+    padding-top: 10px;
+}
+
+.intro{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 footer{
@@ -188,6 +202,8 @@ footer{
 footer p{
     padding-top: 10px;
     padding-right: 5px;
+    display: inline;
+    float: right;
 }
 footer .nav{
     padding-left: 10px;
@@ -203,6 +219,7 @@ footer .nav>li{
 }
 footer ul{
     display: inline;
+    float:left;
 }
 
 .copyright{
@@ -210,3 +227,134 @@ footer ul{
     display: inline;
     float: right;
 }
+
+
+/*modal*/
+
+.portfolio-modal .modal-content {
+    padding: 20px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 55px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 55px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1024px){
+    #diamond{
+        display: inline;
+        padding-top: 55px;
+        z-index: 1; 
+        position:fixed; 
+    }
+
+    #welcome_message{
+        padding-top: 230px; 
+        padding-left: 40px;
+        color: white;
+    }
+
+    h3{
+        display: inline-block;
+    }
+    .right{
+    float: right;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #welcome_message{
+        padding-top: 230px; 
+        padding-left: 80px;
+        color: white;
+    }
+   #diamond{
+        display: inline;
+        padding-top: 55px;
+        z-index: 1; 
+        position:fixed; 
+    }
+
+    h3{
+        display: inline-block;
+    }
+    .right{
+    float: right;
+    }
+
+
+}
+
+}
+@media print{
+    header h1{
+        display: none;
+    }
+    nav a{
+        display:block;
+        text-align: center;
+        border: 0;
+        text-decoration: underline;
+    }
+    img{
+        display:none;
+    }
+}
+
