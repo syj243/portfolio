@@ -12,9 +12,10 @@
 	<div class = "contact text-center" >
 	    {{errormessage}}
 	    <form action = "/contact" method = "post">
-	        <div><label>username: <input type = "text" name = "name"></label></div>
-	        <div><label>password: <input type = "password" name = "pw"></label></div>
-	        <input type = "submit" value = "login">
+	        <div class = "input"><input type="text" name="name" placeholder="Name"></div>
+  			<div class = "input"><input type="email" name="email" placeholder="Email"></div>
+  			<div class = "input"><input type="textarea" name="message" placeholder="Message"></div>
+  			<div class = "input"><input type="submit" value="contact"></div>
 	    </form> 
     </div>
 {%endblock%}

@@ -18,6 +18,7 @@ import webapp2
 import os
 import logging
 import jinja2
+from google.appengine.api import mail
 
 # Lets set it up so we know where we stored the template files
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -43,8 +44,6 @@ class firstHandler(webapp2.RequestHandler):
             self.response.write(template.render({'title': 'WORK'}))
         if path == "/personal":
             self.response.write(template.render({'title': 'PERSONAL'}))
-        if path == "/contact":
-            self.response.write(template.render({'title': 'CONTACT'}))
 
 # class emailHandler(webapp2.RequestHandler):
 #     def get(self):
@@ -60,16 +59,16 @@ class emailHandler(webapp2.RequestHandler):
       self.response.write(template.render({'title': 'CONTACT'}))
     def post(self):
       logging.info("-----------Hello POST------------")          #logging POST request
-      idIN = self.request.get('name')     #get the login name
-      passIN = self.request.get('pw')       #get the login password
-      if idIN == "Colleen" and passIN == "pass":
-        template = JINJA_ENVIRONMENT.get_template('templates/loggedin.html')
-        self.response.write(template.render({'title': 'LOGGED IN'}))
-      else:
-        logging.info("Incorrect name: " + idIN)
-        logging.info("Incorrect password: " + passIN) 
-        template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
-        self.response.write(template.render({'title': 'CONTACT', 'errormessage':'Bad credentials. Try again.'}))
+      nameIN = self.request.get('name')  
+      emailIN = self.request.get('email')     
+      messageIN = self.request.get('message')  
+      message = mail.EmailMessage()
+      message.sender = emailIN
+      message.to = "So Yun <syjin@umich.edu>"
+      message.body = messageIN
+      message.send()
+      template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+      self.response.write(template.render({'title': 'CONTACT', 'sentmessage':'Your message has been sent. Thank you!'}))
 
 
 app = webapp2.WSGIApplication([
