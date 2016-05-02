@@ -62,11 +62,11 @@ class emailHandler(webapp2.RequestHandler):
       nameIN = self.request.get('name')  
       emailIN = self.request.get('email')     
       messageIN = self.request.get('message')  
-      message = mail.EmailMessage()
-      message.sender = emailIN
-      message.to = "So Yun <syjin@umich.edu>"
-      message.body = messageIN
-      message.send()
+      # message = mail.EmailMessage()
+      # message.sender = emailIN
+      # message.to = "So Yun <syjin@umich.edu>"
+      # message.body = messageIN
+      # message.send()
       template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
       self.response.write(template.render({'title': 'CONTACT', 'sentmessage':'Your message has been sent. Thank you!'}))
 

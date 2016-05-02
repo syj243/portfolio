@@ -173,9 +173,14 @@ body{
 }
 iframe{
     width:90%;
+    frameBorder:0; 
+    height:400px;
 }
 .to_top{
     padding-bottom: 20px;   
+}
+h1{
+    text-align: center;
 }
 h2{
     font-size: 25px;
@@ -220,7 +225,7 @@ input[type=email] {
     border-bottom:2px solid #ccc; 
 }
 
-input[type=textarea] {
+input .message {
     width: 40%; 
     height: 200px;
     padding:5px; 
